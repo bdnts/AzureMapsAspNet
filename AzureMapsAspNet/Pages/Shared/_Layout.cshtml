@@ -11,10 +11,16 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/index.css" rel="stylesheet">
 
+    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+
+    <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
+    <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-dark bg-dark" id="navbarMain">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Azure Maps Code Samples</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -68,9 +74,8 @@
                         <a class="btn btn-outline-success my-2 my-sm-0" href="javascript:search();">Search</a>
                     </form>
                 </div>
-        </nav>
-    </header>
-        <main role="main" class="">
+            </nav>
+        <main role="main" class="pb-3">
             @RenderBody()
         </main>
 
