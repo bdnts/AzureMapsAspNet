@@ -5,37 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AzureMapsAspNet</title>
     <meta name="description" content="A collection of code samples for the Azure Maps Web Control." />
-    <link href="/SiteResources/azure-maps-logo-13.png" rel="shortcut icon" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/images/azure-maps-logo-13.png" rel="shortcut icon" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/index.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">AzureMapsAspNet</a>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Azure Maps Code Samples</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div id="categoryListDropdown" class="dropdown-menu" aria-labelledby="dropdown02">
+                                <a class="dropdown-item" href="#Animations">Animations</a>
+                                <a class="dropdown-item" href="#Bubble-Layer">Bubble Layer</a>
+                                <a class="dropdown-item" href="#Controls">Controls</a>
+                                <a class="dropdown-item" href="#Custom-Modules">Custom Modules</a>
+                                <a class="dropdown-item" href="#Demos">Demos</a>
+                                <a class="dropdown-item" href="#Device-Sensors">Device Sensors</a>
+                                <a class="dropdown-item" href="#Drawing-Tools-Module">Drawing Tools Module</a>
+                                <a class="dropdown-item" href="#Geospatial-Files">Geospatial Files</a>
+                                <a class="dropdown-item" href="#Heat-Map-Layer">Heat Map Layer</a>
+                                <a class="dropdown-item" href="#HTML-Markers">HTML Markers</a>
+                                <a class="dropdown-item" href="#Image-Layer">Image Layer</a>
+                                <a class="dropdown-item" href="#Line-Layer">Line Layer</a>
+                                <a class="dropdown-item" href="#Map">Map</a>
+                                <a class="dropdown-item" href="#Polygon-and-Polygon-Extrusion-Layers">Polygon and Polygon Extrusion Layers</a>
+                                <a class="dropdown-item" href="#Popups">Popups</a>
+                                <a class="dropdown-item" href="#REST-Services">REST Services</a>
+                                <a class="dropdown-item" href="#Services-Module">Services Module</a>
+                                <a class="dropdown-item" href="#Spatial-Math">Spatial Math</a>
+                                <a class="dropdown-item" href="#Symbol-Layer">Symbol Layer</a>
+                                <a class="dropdown-item" href="#Third-Party-Map-Controls">Third Party Map Controls</a>
+                                <a class="dropdown-item" href="#Tile-Layers">Tile Layers</a>
+                                <a class="dropdown-item" href="#Traffic">Traffic</a>
+                                <a class="dropdown-item" href="#Tutorials">Tutorials</a>
+                                <a class="dropdown-item" href="#ExternalSamples">External Samples</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" target="_blank" href="https://docs.microsoft.com/azure/location-based-services/">Documentation</a>
+                                <a class="dropdown-item" target="_blank" href="https://feedback.azure.com/forums/909172-azure-maps">Feedback</a>
+                                <a class="dropdown-item" target="_blank" href="https://feedback.azuremaps.com">Report a data issue</a>
+                                <a class="dropdown-item" target="_blank" href="https://stackoverflow.com/questions/tagged/azure-maps">Forums</a>
+                                <a class="dropdown-item" target="_blank" href="https://azure.microsoft.com/en-us/blog/topics/azure-maps/">Blog</a>
+                            </div>
                         </li>
                     </ul>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=Azure-Samples&repo=AzureMapsCodeSamples&type=star&count=true" frameborder="0" scrolling="0" style="width:100px;height:20px" aria-label="Github vote counter" lang="en"></iframe>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input id="searchTbx" class="form-control mr-sm-2" type="text" autocomplete="off" placeholder="Search" aria-label="Search">
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="javascript:search();">Search</a>
+                    </form>
                 </div>
-            </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="">
             @RenderBody()
         </main>
-    </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
