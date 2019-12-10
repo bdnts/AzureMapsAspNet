@@ -1,8 +1,11 @@
-﻿    var map, datasource, client, popup, searchInput, resultsPanel, searchInputLength, centerMapOnResults;
-    //The minimum number of characters needed in the search input before a search is performed.
-    var minSearchInputLength = 3;
+﻿var map, datasource, client, popup, searchInput, resultsPanel, searchInputLength, centerMapOnResults;
+
+//The minimum number of characters needed in the search input before a search is performed.
+var minSearchInputLength = 3;
+
     //The number of ms between key strokes to wait before performing a search.
-    var keyStrokeDelay = 150;
+var keyStrokeDelay = 150;
+
         function GetMap() {
         //Initialize a map instance.
         map = new atlas.Map('myMap', {
@@ -12,8 +15,8 @@
             //Add your Azure Maps subscription key to the map SDK. Get an Azure Maps key at https://azure.com/maps
             authOptions: {
                 authType: 'subscriptionKey',
-                subscriptionKey: 'vpMtjo8dL9lUuP7XOls-vgf69ayhIciFS1sncJIzbSk'
-            }
+                 subscriptionKey: document.getElementById('subKey').value
+           }
         });
     //Store a reference to the Search Info Panel.
     resultsPanel = document.getElementById("results-panel");
