@@ -1,21 +1,23 @@
 ﻿@page
 @model AzureMapsAspNet.Tutorials.interactiveSearchModel
 @{
-        ViewData["Title"] = "Interactive Search Quickstart - Azure Maps Web SDK Samples";
-
+    ViewData["Title"] = "Interactive Search Quickstart - Azure Maps Web SDK Samples";
+    var message = @ViewData["Message"];
+    var subKey = ViewData["subKey"];
 }
 <script src="~/js/interactiveSearch.js"></script>
 <link href="~/css/interactiveSearch.css" rel="stylesheet" />
 
+<input type="hidden" id="subKey" name="subKey" value="@subKey" />
 <body onload="GetMap()">
     <div class="container" style="position: fixed; top: 75px;">
         <div id="myMap" style="height: 500px;"></div>
 
-        <div id="search" style="position: fixed; top: 75px;" >
-            <div class="search-input-box" >
-                <div class="search-input-group"  >
+        <div id="search" style="position: fixed; top: 75px;">
+            <div class="search-input-box">
+                <div class="search-input-group">
                     <div class="search-icon" type="button"></div>
-                    <input id="search-input" type="text" placeholder="Search" >
+                    <input id="search-input" type="text" placeholder="Search">
                 </div>
             </div>
             <ul id="results-panel"></ul>

@@ -2,9 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>65419987-effa-4fa9-9977-7e1e803e38cb</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Configuration\Configuration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Configuration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Configuration\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
